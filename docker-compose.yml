@@ -24,7 +24,6 @@ services:
     volumes:
       - ./backend:/home/app/express-blog-api
       - backend_node_module:/home/app/express-blog-api/node_modules
-      - frontend:/home/app/express-blog-api/src/client/build
     depends_on:
       - mongo
       - redis

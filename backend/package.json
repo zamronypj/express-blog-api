@@ -16,9 +16,7 @@
     "lint:fix": "eslint './src/**/*.{js,jsx}' --fix",
     "db": "babel-node src/db_seed"
   },
-  "author": "Uyen Do",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/minhuyen/express-blog-api#readme",
   "dependencies": {
     "api-query-params": "^5.1.1",
     "apn": "^2.2.0",
