@@ -2,7 +2,7 @@
 
 Example Node.js Express API web application which maintain blog post data
 
-<img src="screenshot.png" width="300"/>
+<img src="screenshot.png" width="400"/>
 
 ## Prerequisites
 
