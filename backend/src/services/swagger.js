@@ -1,11 +1,13 @@
 import swaggerUi from 'swagger-ui-express';
 import swaggerJSDoc from 'swagger-jsdoc';
+import config from '../config';
+
+const pageTitle = config.app.name;
 
 const swagger = () => {
   const swaggerDefinition = {
-    // openapi: '3.0.0', // Specification (optional, defaults to swagger: '2.0')
     info: {
-      title: 'private-phone-number', // Title (required)
+      title: pageTitle, // Title (required)
       version: '1.0.0' // Version (required)
     },
     basePath: '/api/v1', // Base path (optional)
@@ -31,6 +33,7 @@ const swagger = () => {
 
   const swOptions = {
     explorer: true,
+    customSiteTitle: pageTitle,
     customCss:
       '.swagger-ui .opblock-body pre span {color: #DCD427 !important} .swagger-ui .opblock-body pre {color: #DCD427} .swagger-ui textarea.curl {color: #DCD427} .swagger-ui .response-col_description__inner div.markdown, .swagger-ui .response-col_description__inner div.renderedMarkdown {color: #DCD427}'
   };

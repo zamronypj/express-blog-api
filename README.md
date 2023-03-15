@@ -2,6 +2,8 @@
 
 Example Node.js Express API web application which maintain blog post data
 
+<img src="screenshot.png" width="300"/>
+
 ## Prerequisites
 
 - [Docker (at least 1.10)](https://www.docker.com/)
@@ -19,3 +21,10 @@ $ docker-compose up
 ```
 
 To access API documentations, visit `http://localhost:3000/api-docs`.
+
+To stop application,
+
+```
+$ cd express-blog-api
+$ docker-compose down
+```
