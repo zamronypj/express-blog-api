@@ -15,10 +15,12 @@ import {
   logErrors
 } from './helpers/handle-errors';
 import { logger, mongoose, swagger } from './services';
+import api from './api';
 import config from './config';
 
 require('./services/passport');
 
+const rootApi = '/api/v1';
 const ROOT_FOLDER = path.join(__dirname, '..');
 const SRC_FOLDER = path.join(ROOT_FOLDER, 'src');
 
@@ -69,6 +71,8 @@ app.get('/', (req, res) =>
 );
 
 app.use('/api-docs', swagger());
+
+app.use(rootApi, api);
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
