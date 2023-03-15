@@ -12,7 +12,8 @@ beforeEach(async () => {
   await authService.signup({
     email: 'testLogin@test.com',
     password: '123456',
-    fullName: "TestLogin"
+    firstName: "TestLogin",
+    lastName: "LastNameLogin"
   });
 });
 
@@ -34,7 +35,8 @@ describe('GET /signup', function() {
       .send({
         email: 'test@test.com',
         password: '123456',
-        fullName: 'Test'
+        firstName: 'Test',
+        lastName: 'Test Last Name'
       })
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)

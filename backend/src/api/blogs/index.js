@@ -16,13 +16,25 @@ const router = express.Router();
  *   Blog:
  *     type: object
  *     required:
- *       - field1
- *       - field2
+ *       - title
+ *       - author
+ *       - content
  *     properties:
- *       field1:
+ *       title:
  *         type: string
- *       field2:
+ *       author:
  *         type: string
+ *       content:
+ *         type: string
+ *       categories:
+ *         type: array
+ *         items:
+ *           type: object
+ *           properties:
+ *             name:
+ *               type: string
+ *             slug:
+ *               type: string
  *
  *   ArrayOfBlogs:
  *      type: array

@@ -10,7 +10,11 @@ const ROLES = {
 
 const UserSchema = new Schema(
   {
-    fullName: {
+    firstName: {
+      type: String,
+      required: true
+    },
+    lastName: {
       type: String,
       required: true
     },

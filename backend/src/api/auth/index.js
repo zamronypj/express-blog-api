@@ -61,10 +61,6 @@ const router = express.Router();
  *      - lastName
  *      - email
  *      - password
- *      - accountType
- *      - gender
- *      - birthday
- *      - username
  *    properties:
  *      firstName:
  *        type: string
@@ -76,19 +72,6 @@ const router = express.Router();
  *      password:
  *        type: string
  *        format: password
- *      accountType:
- *        type: string,
- *        enum: [caller, receive_call, both]
- *      gender:
- *        type: string
- *        enum: [female, male, unknown]
- *      birthday:
- *        type: string
- *        format: date
- *      username:
- *        type: string
- *      about:
- *        type: string
  *  User:
  *    type: object
  *    required: true
@@ -109,8 +92,6 @@ const router = express.Router();
  *        format: date
  *      gender:
  *        type: string
- *      price:
- *        type: number
  *      photos:
  *        type: array
  *        items:
