@@ -7,11 +7,21 @@ const { paginateValidationSchema, ObjectId } = schemas;
 export const customPaginateValidateSchema = paginateValidationSchema.keys();
 
 export const createValidationSchema = Joi.object({
-  field: Joi.string().required(),
-  field2: Joi.string().required()
+  title: Joi.string().required(),
+  author: Joi.string().required(),
+  content: Joi.string().required(),
+  categories: Joi.array().items(Joi.object({
+    name: Joi.string().optional(),
+    slug: Joi.string().optional(),
+  })).optional()
 });
 
 export const updateValidationSchema = Joi.object({
-  field: Joi.string().optional(),
-  field2: Joi.string().optional()
+  title: Joi.string().required(),
+  author: Joi.string().required(),
+  content: Joi.string().required(),
+  categories: Joi.array().items(Joi.object({
+    name: Joi.string().optional(),
+    slug: Joi.string().optional(),
+  })).optional()
 }).unknown(true);

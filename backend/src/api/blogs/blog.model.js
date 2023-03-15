@@ -4,14 +4,28 @@ import mongooseUniqueValidator from 'mongoose-unique-validator';
 
 const BlogSchema = new Schema(
   {
-    field: {
+    title: {
       type: String,
       required: true
     },
-    field2: {
+    author: {
       type: String,
       required: true
-    }
+    },
+    content: {
+      type: String,
+      required: true
+    },
+    categories: [{
+      name: {
+        type: String,
+        required: false
+      },
+      slug: {
+        type: String,
+        required: false
+      }
+    }]
   },
   { timestamps: true }
 );
