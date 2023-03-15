@@ -1,8 +1,8 @@
 # express-blog-api
 
-express-blog-api
+Example Node.js Express API web application which maintain blog post data
 
-### Prerequisites
+## Prerequisites
 
 - [Docker (at least 1.10)](https://www.docker.com/)
 - [Docker-compose (at least 1.6)](https://docs.docker.com/compose/install/)
@@ -11,16 +11,11 @@ express-blog-api
 
 To get up and running on local, simply do the following:
 
-    $ cd express-blog-api
-    # build docker images
-    $ docker-compose build
-    $ docker-compose up
+```
+$ cd express-blog-api
+$ cp .env.example .env
+$ docker-compose build
+$ docker-compose up
+```
 
-## Deployment
-
-ssh to server
-
-    $ cd ~/express-blog-api
-    $ git pull origin develop
-    $ docker-compose -f docker-compose.dev.yml build
-    $ docker-compose -f docker-compose.dev.yml up -d
+To access API documentations, visit `http://localhost:3000/api-docs`.
